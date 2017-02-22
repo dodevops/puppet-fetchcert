@@ -5,6 +5,7 @@
 Puppetfile.lock
 .yardoc
 .kitchen
+Gemfile.lock
 ### Ruby template
 *.gem
 *.rbc
