@@ -33,4 +33,4 @@ define the hash "fetchcert::fetch"
 
 ## Parameters
 
-See the documentation.
+See the [documentation](https://dodevops.github.io/puppet-fetchcert/doc/index.html).
