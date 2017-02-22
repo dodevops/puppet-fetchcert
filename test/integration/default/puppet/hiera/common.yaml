@@ -1,0 +1,6 @@
+classes:
+    - fetchcert
+
+fetchcert::fetch:
+    /tmp/testhiera.pem:
+        source_host: google.com
