@@ -1,5 +1,7 @@
 # fetchcert
 
+[![Travis](https://img.shields.io/travis/dodevops/puppet-fetchcert.svg)](https://travis-ci.org/dodevops/puppet-fetchcert)
+
 Fetch a remote certificate and store it locally
 
 ## Introduction
