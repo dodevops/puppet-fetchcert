@@ -9,7 +9,7 @@ class fetchcert (
   $openssl_command = '/usr/bin/openssl'
 ) {
 
-  $_fetchcert_fetch = hiera_hash('fetchcert::fetch', undef)
+  $_fetchcert_fetch = lookup('fetchcert::fetch', {merge => hash, default_value => undef})
 
   if ($_fetchcert_fetch) {
     create_resources('fetchcert::fetch', $_fetchcert_fetch)
