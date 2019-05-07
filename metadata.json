@@ -1,6 +1,6 @@
 {
   "name": "dodevops-fetchcert",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": "dodevops",
   "summary": "Fetch a remote certificate and store it locally",
   "license": "MIT",
