@@ -1,4 +1,4 @@
-hiera_include('classes', undef)
+lookup('classes', {merge => unique, default_value => undef}).include
 
 fetchcert::fetch {
   '/tmp/testpuppet.pem':
