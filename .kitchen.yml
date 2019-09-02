@@ -10,7 +10,6 @@ provisioner:
   puppet_debug: true
 
 platforms:
-  - name: ubuntu-14.04
   - name: ubuntu-16.04
     provisioner:
       name: puppet_apply
@@ -23,6 +22,36 @@ platforms:
       name: puppet_apply
       require_puppet_collections: true
       puppet_apt_collections_repo: "http://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb"
+  - name: ubuntu-18.04
+    provisioner:
+      name: puppet_apply
+      puppet_apt_repo: "http://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb"
+  - name: ubuntu-18.04-puppet4
+    driver_config:
+      image: ubuntu:18.04
+      platform: ubuntu
+    provisioner:
+      name: puppet_apply
+      require_puppet_collections: true
+      puppet_apt_collections_repo: "http://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb"
+  - name: centos-7
+    driver_config:
+      run_command: /usr/sbin/init
+      privileged: true
+    provisioner:
+      name: puppet_apply
+      require_puppet_collections: true
+      puppet_yum_collections_repo: "https://yum.puppetlabs.com/puppet5/puppet5-release-el-7.noarch.rpm"
+  - name: centos-7-puppet4
+    driver_config:
+      image: centos:7
+      platform: centos
+      run_command: /usr/sbin/init
+      privileged: true
+    provisioner:
+      name: puppet_apply
+      require_puppet_collections: true
+      puppet_yum_collections_repo: "https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm"
 
 
 suites:

@@ -1,0 +1,2 @@
+fetchcert::package_name: "openssl"
+fetchcert::package_provider: "apt"

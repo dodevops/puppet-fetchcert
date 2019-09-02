@@ -2,18 +2,20 @@ require 'spec_helper'
 
 # Check basic feature
 
-describe file('/tmp/testpuppet.pem') do
-  it { should exist }
-  it { should be_file }
-  its(:size) { should > 0 }
-  its(:content) { should contain 'BEGIN CERTIFICATE'}
-end
+describe 'fetchert' do
+  describe file('/tmp/testpuppet.pem') do
+    it { is_expected.to exist }
+    it { is_expected.to be_file }
+    its(:size) { is_expected.to be > 0 }
+    its(:content) { is_expected.to contain 'BEGIN CERTIFICATE' }
+  end
 
-# Check hiera feature
+  # Check hiera feature
 
-describe file('/tmp/testhiera.pem') do
-  it { should exist }
-  it { should be_file }
-  its(:size) { should > 0 }
-  its(:content) { should contain 'BEGIN CERTIFICATE'}
+  describe file('/tmp/testhiera.pem') do
+    it { is_expected.to exist }
+    it { is_expected.to be_file }
+    its(:size) { is_expected.to be > 0 }
+    its(:content) { is_expected.to contain 'BEGIN CERTIFICATE' }
+  end
 end

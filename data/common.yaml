@@ -1,0 +1,4 @@
+fetchcert::source_port: 443
+fetchcert::openssl_command: "/usr/bin/openssl"
+fetchcert::manage_package: true
+fetchcert::package_ensure: "present"
